@@ -62,6 +62,9 @@ function nextRound() {
     setupDragAndDrop();
     setupDefeatOniButtons();
     updateScoreDisplay();
+
+    // ラウンドが変わったことを知らせるポップアップを表示
+    alert(`ラウンド${currentRound}が開始されました。`);
 }
 
 function setupDragAndDrop() {
