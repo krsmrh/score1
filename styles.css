@@ -1,0 +1,42 @@
+body {
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+input, button, select {
+    margin: 5px;
+    padding: 5px;
+}
+
+#current-oni {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: red;
+}
+
+#runner-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+#runner-list li {
+    padding: 10px;
+    margin: 5px 0;
+    background-color: #f0f0f0;
+    cursor: move;
+}
+
+#defeat-oni-buttons button {
+    margin-right: 10px;
+}
+
+#final-results {
+    text-align: center;
+}
+
+#winner {
+    font-size: 2em;
+    color: gold;
+}

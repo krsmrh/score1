@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>鬼ごっこスコアシステム</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="game-setup">
+        <h2>プレイヤー名を入力してください</h2>
+        <input type="text" id="player1" placeholder="プレイヤー1">
+        <input type="text" id="player2" placeholder="プレイヤー2">
+        <input type="text" id="player3" placeholder="プレイヤー3">
+        <input type="text" id="player4" placeholder="プレイヤー4">
+        <input type="text" id="player5" placeholder="プレイヤー5">
+        <button id="start-game">ゲーム開始</button>
+    </div>
+
+    <div id="game-play" style="display:none;">
+        <h2>現在の鬼: <span id="current-oni"></span></h2>
+        <div id="runners">
+            <h3>逃げる側の順位（ドラッグ＆ドロップで並べ替え）</h3>
+            <ul id="runner-list"></ul>
+        </div>
+        <div id="oni-actions">
+            <h3>鬼のアクション</h3>
+            <label>捕まえた人数: <input type="number" id="caught-count" min="0" max="4" value="0"></label>
+        </div>
+        <div id="runner-actions">
+            <h3>逃げる側のアクション</h3>
+            <div id="defeat-oni-buttons"></div>
+        </div>
+        <button id="next-round">次のラウンドへ</button>
+    </div>
+
+    <div id="results" style="display:none;">
+        <h2>現在のスコア</h2>
+        <ul id="score-list"></ul>
+    </div>
+
+    <div id="final-results" style="display:none;">
+        <h1>優勝者: <span id="winner"></span></h1>
+        <h2>最終スコア</h2>
+        <ul id="final-score-list"></ul>
+        <button id="reset-game">新しいゲームを開始</button>
+    </div>
+
+    <div id="score-adjustment">
+        <h3>スコア調整</h3>
+        <select id="player-select"></select>
+        <button id="add-point">+1 ポイント</button>
+        <button id="subtract-point">-1 ポイント</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
